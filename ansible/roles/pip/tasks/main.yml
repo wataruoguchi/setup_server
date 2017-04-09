@@ -6,3 +6,7 @@
 - name: pip install ansible-container
   become: yes
   command: pip install ansible-container
+
+- name: pip install dumb-init
+  become: yes
+  command: pip install dumb-init
