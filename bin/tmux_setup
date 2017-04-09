@@ -3,7 +3,8 @@ set -x
 set -e
 
 # Specify the config file
-TMUX="tmux -f ~/.tmux.conf"
+# TODO give a better path
+TMUX="tmux -f /home/vagrant/.tmux.conf"
 
 # Start a new session
 $TMUX new-session
