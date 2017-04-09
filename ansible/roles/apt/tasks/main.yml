@@ -8,7 +8,7 @@
 - name: apt-get git
   become: yes
   apt:
-    name: unzip
+    name: git
     update_cache: yes
 
 - name: apt-get unzip
