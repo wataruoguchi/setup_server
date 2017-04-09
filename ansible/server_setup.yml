@@ -4,3 +4,5 @@
   become: false
   roles:
     - timezone
+    - apt
+    - pip

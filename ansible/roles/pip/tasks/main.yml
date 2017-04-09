@@ -1,0 +1,4 @@
+---
+- name: apt-get pip
+  become: yes
+  command: pip install -U pip setuptools
