@@ -1,0 +1,9 @@
+#!/bin/sh
+cat > ~/.commonrc << EOF
+set -o vi
+export PATH=$PATH:/home/vagrant/devops/bin
+EOF
+. ~/.commonrc
+
+docker_install
+ansible_install

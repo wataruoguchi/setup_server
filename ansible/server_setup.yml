@@ -1,0 +1,6 @@
+---
+- name: server setup
+  hosts: 127.0.0.1
+  become: false
+  roles:
+    - timezone
