@@ -1,4 +1,8 @@
 ---
-- name: apt-get pip
+- name: pip install setuptool
   become: yes
   command: pip install -U pip setuptools
+
+- name: pip install ansible-container
+  become: yes
+  command: pip install ansible-container
