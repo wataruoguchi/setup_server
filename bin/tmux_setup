@@ -3,7 +3,7 @@ set -x
 set -e
 
 # Specify the config file
-TMUX="tmux -f ~/.tmuxrc"
+TMUX="tmux -f ~/.tmux.conf"
 
 # Start a new session
 $TMUX new-session
