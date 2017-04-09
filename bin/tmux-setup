@@ -1,0 +1,12 @@
+#!/bin/bash
+set -x 
+set -e
+
+# Specify the config file
+TMUX="tmux -f ~/.tmuxrc"
+
+# Start a new session
+$TMUX new-session
+
+# Attach to the session
+$TMUX attach-session

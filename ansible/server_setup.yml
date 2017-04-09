@@ -6,3 +6,4 @@
     - timezone
     - apt
     - pip
+    - tmux_conf
