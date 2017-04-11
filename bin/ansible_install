@@ -1,13 +1,15 @@
 #!/bin/bash
-sudo apt-get install -y software-properties-common
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update -y
-sudo apt-get install -y ansible
-sudo mv /etc/ansible/hosts /etc/ansible/hosts.orig
-echo "127.0.0.1" | sudo tee -a /etc/ansible/hosts
+if ! hash ansible 2>/dev/null; then
+  sudo apt-get install -y software-properties-common
+  sudo apt-add-repository -y ppa:ansible/ansible
+  sudo apt-get update -y
+  sudo apt-get install -y ansible
+  sudo mv /etc/ansible/hosts /etc/ansible/hosts.orig
+  echo "127.0.0.1" | sudo tee -a /etc/ansible/hosts
 
-# Command manually
-# ssh-keygen -t rsa
-# ssh-copy-id $user@localhost
-# ssh-agent bash
-# ssh-add ~/.ssh/id_rsa
+  # set passphrase manually
+  ssh-keygen -t rsa
+  ssh-copy-id $user@localhost
+  ssh-agent bash
+  ssh-add ~/.ssh/id_rsa
+fi
