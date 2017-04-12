@@ -23,3 +23,10 @@ if ! hash pip 2>/dev/null; then
     sudo chmod +x /usr/local/bin/docker-compose
   fi
 fi
+
+# Use Docker without sudo
+# http://askubuntu.com/a/477554/468192
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+newgrp docker

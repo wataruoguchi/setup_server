@@ -2,6 +2,8 @@
 cat > ~/.commonrc << EOF
 set -o vi
 export PATH=$PATH:/home/vagrant/devops/bin
+alias d='docker'
+alias dall='d ps -a -q'
 EOF
 . ~/.commonrc
 
