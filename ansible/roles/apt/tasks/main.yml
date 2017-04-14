@@ -16,3 +16,16 @@
   apt:
     name: unzip
     update_cache: yes
+
+- name: apt-get nodejs
+  become: yes
+  apt:
+    name: nodejs
+    update_cache: yes
+
+- name: apt-get npm
+  become: yes
+  apt:
+    name: npm
+    update_cache: yes
+
